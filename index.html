@@ -5,198 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>保护地球 · 从我做起</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin:0; padding:0; box-sizing:border-box; }
         body {
-            font-family: "Microsoft YaHei", Arial, sans-serif;
-            background: linear-gradient(to bottom, #e0f7fa, #a5dee5);
+            font-family: -apple-system, "Microsoft YaHei", Arial， sans-serif;
+            background: #e8f5e9;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.8;
         }
         header {
-            background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1920') no-repeat center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            background: #2e7d32;
             color: white;
-            position: relative;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 100, 80, 0.6);
-        }
-        .header-content {
-            position: relative;
-            z-index: 2;
-            max-width: 900px;
-            padding: 20px;
+            text-align: center;
+            padding: 80px 20px;
         }
         h1 {
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
-        p.lead {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 36px;
-            background: #ff6b6b;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-        }
-        .btn:hover { background: #ff5252; transform: scale(1.05); }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        section { margin-bottom: 80px; }
-        h2 {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 50px;
-            color: #00695c;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .card:hover { transform: translateY(-10px); }
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .card-body {
-            padding: 25px;
-        }
-        .card h3 {
-            color: #00796b;
-            margin-bottom: 15px;
-        }
-
-        .stats {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            text-align: center;
-        }
-        .stat-item {
-            background: rgba(255,255,255,0.8);
-            padding: 30px;
-            border-radius: 15px;
-            min-width: 180px;
-        }
-        .stat-number {
             font-size: 3rem;
-            font-weight: bold;
-            color: #d32f2f;
+            margin-bottom: 20px;
         }
-
+        h1 span {
+            font-size: 3.8rem;
+            display: block;
+            color: #c8e6c9;
+        }
+        。container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        。tip {
+            background: white;
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        .tip strong {
+            color: #2e7d32;
+            font-size: 1.4rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        ul {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        li {
+            margin: 18px 0;
+            padding-left: 10px;
+        }
+        li::before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+        }
         footer {
-            background: #004d40;
-            color: white;
             text-align: center;
             padding: 40px 20px;
+            background: #2e7d32;
+            color: white;
+            margin-top: 60px;
         }
-        footer a {
-            color: #80deea;
-            text-decoration: none;
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            h1 span { font-size: 2.8rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="header-content">
-            <h1>保护地球<br>从我做起</h1>
-            <p class="lead">地球是我们共同的家园，每一个小小的行动，都能让未来更美好</p>
-            <a href="#action" class="btn">立即行动</a>
-        </div>
+        <h1>
+            保护地球<br>
+            <span>从我做起</span>
+        </h1>
+        <p>地球是我们唯一的家<br>每一个人都能为她做一点事</p>
     </header>
 
     <div class="container">
 
-        <section id="action">
-            <h2>我们能做什么</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800" alt="减塑">
-                    <div class="card-body">
-                        <h3>减少塑料使用</h3>
-                        <p>自带购物袋、拒绝一次性吸管和餐具，每人每年可减少约20公斤塑料垃圾。</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1582213782179-1975a04b97f1?w=800" alt="节约能源">
-                    <div class="card-body">
-                        <h3>节约能源</h3>
-                        <p>随手关灯、选择公共交通或骑行，降低碳排放，延缓全球变暖。</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1518530885472-8eeb1a6fc16e?w=800" alt="垃圾分类">
-                    <div class="card-body">
-                        <h3>垃圾分类</h3>
-                        <p>正确分类垃圾，让可回收物重新利用，减少填埋和焚烧带来的污染。</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1544551766-92b98408c71b?w=800" alt="植树">
-                    <div class="card-body">
-                        <h3>多种一棵树</h3>
-                        <p>一棵树一年可吸收18公斤二氧化碳，种树是最简单的碳中和方式。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="tip">
+            <strong>今天，你可以这样做：</strong>
+            自带水杯和购物袋 · 垃圾分类 · 随手关灯 · 少点一次外卖
+        </div>
 
-        <section>
-            <h2>触目惊心的数据</h2>
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-number">8亿</div>
-                    <p>每年进入海洋的塑料垃圾（吨）</p>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1.3亿</div>
-                    <p>全球每年森林消失面积（公顷）</p>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50%</div>
-                    <p>过去50年野生动物数量减少</p>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1℃</div>
-                    <p>过去百年全球气温已上升</p>
-                </div>
-            </div>
-        </section>
+        <ul>
+            <li>自带购物袋，拒绝一次性塑料袋</li>
+            <li>用可重复使用的水杯和餐具</li>
+            <li>垃圾分类，让可回收物重新变成资源</li>
+            <li>出门优先选择公交、地铁、骑行或步行</li>
+            <li>随手关灯，拔插头，节约每一度电</li>
+            <li>少点外卖，减少一次性餐盒和包装</li>
+            <li>多种一棵树，或参与社区环保活动</li>
+            <li>把环保理念告诉身边的朋友</li>
+        </ul>
+
+        <div class="tip">
+            保护环境不是口号<br>
+            而是每天一点点实实在在的小行动
+        </div>
 
     </div>
 
     <footer>
-        <p>地球只有一个 · 保护环境，从你我开始</p>
-        <p>© 2025 保护地球公益页面 | <a href="#">了解更多环保项目</a></p>
+        地球只有一个 · 行动从现在开始<br>
+        © 2025 极简环保页面 · 无脚本 · 纯静态
     </footer>
 
 </body>
